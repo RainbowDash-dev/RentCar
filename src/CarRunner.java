@@ -12,9 +12,9 @@ import java.util.Scanner;
 
 public class CarRunner {
 
-    // check git push commit 2
 
-    private static final int MAX_ATTEMPTS = 5; // "check commit 2", then return to 3
+
+    private static final int MAX_ATTEMPTS = 3;
     static Scanner sc = new Scanner(System.in);
 
 

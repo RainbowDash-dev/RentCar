@@ -14,7 +14,7 @@ public class CarRunner {
 
 
 
-    private static final int MAX_ATTEMPTS = 33;
+    private static final int MAX_ATTEMPTS = 3;
     static Scanner sc = new Scanner(System.in);
 
 

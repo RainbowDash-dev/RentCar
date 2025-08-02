@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class UserService {
 
     private static final UserService INSTANCE = new UserService();
-    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     private static final int MAX_ATTEMPTS = 3;
     private static final int MAX_NAMES_LENGTH = 15;
     private static final BigDecimal MAX_BALANCE = new BigDecimal("100000");
@@ -165,7 +165,7 @@ public class UserService {
     private LocalDate readDateWithAttempts(Scanner scanner) {
         int attempts = 0;
         while (attempts < MAX_ATTEMPTS) {
-            System.out.print("Дата рождения в формате ГГГГ-ММ-ДД: ");
+            System.out.print("Дата рождения в формате дд.мм.гггг: ");
             String input = scanner.nextLine().trim();
 
             try {
@@ -186,7 +186,7 @@ public class UserService {
                 }
                 return date;
             } catch (DateTimeParseException e) {
-                System.out.println("Неверный формат. Пример \"1990-01-30\"");
+                System.out.println("Неверный формат. Пример \"31.12.1999\"");
                 attempts++;
             }
         }
